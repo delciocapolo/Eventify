@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+/* FONTS */
+@import '@fontsource-variable/nunito/index.css';
+@import '@fontsource-variable/manrope/index.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* PLUGINS */
+@plugin "daisyui";
+
+@theme {
+    --font-display: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer utilities {
+    .container {
+        padding-inline: 0.5rem;
+        margin: 0 auto;
+
+        @variant sm {
+            padding-inline: 0.5rem;
+        }
+
+        @variant md {
+            padding-inline: 5rem;
+        }
+    }
+}
