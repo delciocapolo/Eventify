@@ -3,6 +3,7 @@
 /* FONTS */
 @import '@fontsource-variable/nunito/index.css';
 @import '@fontsource-variable/manrope/index.css';
+@import '@fontsource/lalezar/index.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -12,9 +13,42 @@
 /* PLUGINS */
 @plugin "daisyui";
 
+/* TAILWIND CONFIG */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100vh;
+        background-color: var(--color-white);
+        @apply font-display;
+    }
+}
+
 @theme {
     --font-display: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-manrope: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-lalezar: 'Lalezar', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-primary-900: #2D2C3C;
+    --color-light-grey: #EEEEEE;
+    --color-dark-grey: #5A5A5A;
+    --color-joy-coral: #F0534F;
+    --color-joy-grayish-black: #1D1D1D;
+    --color-joy-grayish-white: #F8F8F8;
+    --color-joy-dark-gray: #333333;
+    --color-joy-medium-gray: #595959;
+    --color-joy-light-gray: #848484;
 }
 
 @layer utilities {

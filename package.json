@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@fontsource-variable/manrope": "^5.2.6",
-        "@fontsource-variable/nunito": "^5.2.6"
+        "@fontsource-variable/nunito": "^5.2.6",
+        "@fontsource/lalezar": "^5.2.6"
     }
 }
